@@ -1,0 +1,38 @@
+# simple polynomial function for RDIS to optimize
+# - the polynomial is simply a sum of terms, where the terms are products
+#   of a coefficient and any number of exponentiated variables
+#
+# this file follows a very simple structure, as follows
+# - lines beginning with '#' are considered comments and ignored
+# - blank lines are ignored
+# - <val> indicates a required entry and [val] indicates an optional entry
+# - variable domains are defined by lines containing '<varname> = <lower>:<upper>'
+# - the default domain is a special case of a variable domain where
+#   <varname> is equal to 'default', i.e., 'default = <lower>:<upper>'
+# - terms in the polynomial are defined by lines containing:
+#   '[coefficient][, <varname_1>^[exponent_1], ..., <varname_n>^[exponent_n]]'
+#   -- either [coefficient] or <varname_1> must be specified, but do not specify
+#      the same variable multiple times on the same line or multiple coefficients
+
+# - this particular polynomial is:
+#       f(x0,x1) = 0.0625*x0^4 - 2.5*x0^2 + 2*x0 + 0.0625*x1^4 - 2.5*x1^2 + 2*x1 - 100
+#   this has global minimum of -168.2721 at (-4.6601, -4.6601) and three
+#   local minima: -150.4016 at (4.2568, -4.6601)
+#                 -150.4016 at (-4.6601, 4.2568)
+#                 -132.5312 at (4.2568, 4.2568)
+
+# this specifies the default domain -- i.e., all variables with
+# non-specified domains use this domain (e.g., x1 in this file)
+default = -9:9
+
+# this specifies the domain of variable x0
+x0 = -8:8
+
+# the following lines specify the terms of the polynomial
+0.0625,x0^4
+-2.5,x0^2
+-100
+0.0625,x1^4
+-2.5,x1^2
+2,x0
+2,x1
