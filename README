@@ -20,10 +20,11 @@ RDIS builds in <BASE_DIR>/build and there should be three executables: testRDIS,
 - calling './build/<executable> --help' will print the command line options
 
 DEPENDENCIES:
-- NOTE: cmake vars EXT_INCL_DIR and EXT_LIB_DIR specify paths in which the build should look for the following libraries (if they're enable, but not including boost), instead of specifying each one for each library.
+- NOTE: cmake vars EXT_INCL_DIR and EXT_LIB_DIR specify paths in which the build should look for the following libraries (if they're enabled) except for boost, instead of specifying each one for each library.
 - Boost 1.55.0 (required, not included) (or potentially later, but 1.55.0 is tested) from http://www.boost.org/
   - Required boost libs: system, filesystem, program_options, and chrono.
   - You must build these yourself. If the paths to the boost include folder and libs are non-standard (e.g., not in /usr/local/include or /usr/include), then you can specify the paths when calling cmake as 'cmake -D BOOST_ROOT=/path/to/boost .' or you can specify BOOST_INCLUDEDIR and BOOST_LIBRARYDIR separately.
+    - Building these is easy, just follow the Getting Started instructions at www.boost.org.
 - PaToH (not required, included, used by default) hypergraph partitioning library from http://bmi.osu.edu/umit/software.html.
   - Pre-built libs are included in the repo already, so this should (ideally) just work.
   - Can be disabled when calling cmake with 'cmake -D USE_PATOH=FALSE .'
