@@ -1,8 +1,10 @@
 # rdis
 C++ code for the RDIS algorithm from "Recursive Decomposition for Nonconvex Optimization." Friesen and Domingos, IJCAI 2015.
 
-Main platform this was tested on: Mac OS X 64 bit
+Main platform this was tested on: Mac OS X 10.9 64 bit
 Other platforms this hopefully works on: Mac OS X 32 bit, Linux 32 bit & 64 bit
+
+Binaries are included for Mac OS X 64 bit (built on 10.9 Yosemite) in rdis/bin/macosx64, otherwise you will have to build them (see below).
 
 To build (if all dependencies are accessible from default system paths), simply call the following:
 > cmake .
