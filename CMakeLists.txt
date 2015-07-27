@@ -18,10 +18,11 @@ set(USE_LEVMAR FALSE CACHE BOOL "Use the levmar optimization library" )
 #set(BOOST_ROOT <your boost install directory>)
 
 # you can set the following variables to specify paths to external libraries
-#   EXT_LIB_DIR # general path(s) for external libraries
-#   PATOH_DIR # path for PaToH library
-#   HMETIS_DIR # path to HMetis library
-#   LEVMAR_DIR # path to levmar library
+#   EXT_INCL_DIR # general path(s) for external includes
+#   EXT_LIB_DIR  # general path(s) for external libraries
+#   PATOH_DIR    # path to PaToH include and library
+#   HMETIS_DIR   # path to HMetis include and library
+#   LEVMAR_DIR   # path to levmar include and library
 
 
 # ------ set up the build (ideally, shouldn't need to edit below here) ------
