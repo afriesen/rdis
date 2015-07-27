@@ -10,7 +10,6 @@
 
 #include "common.h"
 #include "Variable.h"
-#include "ExclusionRegion.h"
 #include "ComponentCache.h"
 
 #include BOOSTPATH/dynamic_bitset.hpp>

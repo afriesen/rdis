@@ -105,8 +105,6 @@ set( MAIN_SOURCES
     src/optimizers/BCDOptimizer.h
     src/optimizers/CGDSubspaceOptimizer.cpp
     src/optimizers/CGDSubspaceOptimizer.h
-    src/optimizers/EMOptimizer.cpp
-    src/optimizers/EMOptimizer.h
     src/optimizers/EMSubspaceOptimizer.cpp
     src/optimizers/EMSubspaceOptimizer.h
     src/optimizers/LMSubspaceOptimizer.cpp

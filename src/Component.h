@@ -9,8 +9,6 @@
 
 #include "State.h"
 #include "OptimizableFunction.h"
-#include "DomainIterator.h"
-#include "ExclusionRegion.h"
 #include "ComponentCache.h"
 #include "ConnectivityGraph.h"
 #include "OptimizerVariableData.h"

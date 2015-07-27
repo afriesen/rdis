@@ -21,7 +21,6 @@
 
 #include "util/utility.h"
 #include "util/signal_handler.h"
-#include "util/cutting_plane.h"
 
 #include BOOSTPATH/foreach.hpp>
 #include BOOSTPATH/make_shared.hpp>
