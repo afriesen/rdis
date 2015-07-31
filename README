@@ -26,7 +26,7 @@ DEPENDENCIES:
 - Boost 1.55.0 (required, not included) (or potentially later, but 1.55.0 is tested) from http://www.boost.org/
   - Required boost libs: system, filesystem, program_options, and chrono.
   - You must build these yourself. If the paths to the boost include folder and libs are non-standard (e.g., not in /usr/local/include or /usr/include), then you can specify the paths when calling cmake as 'cmake -D BOOST_ROOT=/path/to/boost .' or you can specify BOOST_INCLUDEDIR and BOOST_LIBRARYDIR separately.
-    - Building these is easy, just follow the Getting Started instructions at www.boost.org.
+    - Building these is easy; simply follow the Getting Started instructions at www.boost.org.
 - PaToH (not required, included, used by default) hypergraph partitioning library from http://bmi.osu.edu/umit/software.html.
   - Pre-built libs are included in the repo already, so this should (ideally) just work.
   - Can be disabled when calling cmake with 'cmake -D USE_PATOH=FALSE .'
@@ -38,4 +38,4 @@ DEPENDENCIES:
   - Note that this library requires that LAPACK (and BLAS) are installed and work on your system.
   
 KNOWN ISSUES:
-- If the minimum is on the border of the domain, RDIS will do poorly because it does not handle constraints properly (a non-infinite domain constitues box constraints on the function).
+- If the minimum is on the border of the domain, RDIS will do poorly because it does not handle constraints properly (a non-infinite domain constitutes box constraints on the function).
