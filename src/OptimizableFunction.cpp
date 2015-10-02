@@ -407,8 +407,6 @@ void OptimizableFunction::checkGradient( const FactorPtrVec & facs,
 
 	assert( fd.size() == g.size() );
 
-	bool diff = false;
-
 //	for ( Variable * v : variables ) {
 	for ( const auto & pgv : g ) {
 		v = variables[pgv.first];
@@ -420,16 +418,12 @@ void OptimizableFunction::checkGradient( const FactorPtrVec & facs,
 		fdg = ( fdv == 0 ? fdg : fdg / fdv );
 
 		if ( !approxeq( fdg, 0.0, 1e-3 ) ) {
-			diff = true;
-
 			std::cout << "func grad -- var " << v->getID() << ": df/dv = " <<
 					g.at( v->getID() ) << ", fd = " << fd.at( v->getID() ) <<
 					" -- diff = " << fd.at( v->getID() ) - g.at( v->getID() ) <<
 					", fdg = " << fdg << std::endl;
 		}
 	}
-
-//	assert( !diff );
 }
 
 

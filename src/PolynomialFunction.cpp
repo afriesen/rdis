@@ -163,7 +163,6 @@ bool PolynomialFunction::readFactor( string const & line,
 
 	string name;
 	Numeric exponent = 1.0;
-	Variable * v( NULL );
 
 	std::vector< string > sv1, sv2;
 	BOOSTNS::split( sv1, line, BOOSTNS::is_any_of( "," ) );
