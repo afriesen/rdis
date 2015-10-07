@@ -124,12 +124,8 @@ void optimize_BA( BOOSTNS::random::mt19937 & rng,
 //	const bool isDisc = ( opttype == "discrete" );
 //	const bool isGrid = ( opttype == "grid" );
 
-	Numeric regionwidth = 0.0;
 	Numeric eps = 1.0, lipsch = 20;
 	RDISOptimizer * popt = NULL;
-
-//	regionwidth = ( isRDIS || isBCD ? 2500 : ( isDisc ? 0.0 : 5.0 ) );
-	regionwidth = 2500;
 
 	assert( isRDIS || isBCD /*|| isDisc || isGrid*/ );
 

@@ -215,11 +215,9 @@ void Factor::checkGradient( const PartialGradient & g, const Numeric h ) const {
 
 	assert( fd.size() == g.size() );
 
-	bool diff = false;
 	for ( Variable * v : variables ) {
 		assert( g.find( v->getID() ) != g.end() );
 		if ( !approxeq( fd.at( v->getID() ), g.at( v->getID() ), 1e-4 ) ) {
-			diff = true;
 
 			std::cout << "fac " << id << " var " << v->getID() << ": df/dv = " <<
 					g.at( v->getID() ) << ", fd = " << fd.at( v->getID() ) <<
@@ -227,8 +225,6 @@ void Factor::checkGradient( const PartialGradient & g, const Numeric h ) const {
 					std::endl;
 		}
 	}
-
-//	assert( !diff );
 }
 
 

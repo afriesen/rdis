@@ -254,11 +254,11 @@ void Component::onChildEvaluated( Component & child ) {
     assert( child.hasBeenEvald() );
     assert( child.isUABoundSet );
 
-    const Numeric tol = 1e-6; // use epsilon instead?
-
     const NumericInterval chuab = child.unassignedBounds;
 
 #ifdef DEBUG
+    const Numeric tol = 1e-6; // use epsilon instead?
+
     const bool lbwrong = !approxleq( chuab.lower(), child.getOptSD()->fx, tol );
     const bool ubwrong = !approxgeq( chuab.upper(), child.getOptSD()->fx, tol );
     const bool wasCached = child.fullEvalWasCached;
